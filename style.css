@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 4em;
+  margin-left: 0%;
+  text-align: center;
+  /* font-family: Apple Chancery, cursive; */
+font-family: 'Allerta Stencil', sans-serif;
+  opacity: 0.5;
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  margin: 0;
+  padding-top: 50px;
+}
+
+
+a {
+  width: 20%;
+  height: 50vh;
+}
+
+a:nth-of-type(1) img {
+  box-shadow: 10px 10px 25px 5px black;
+  transform: rotate(15deg);
+  transition: 0.2s ease-in-out;
+  width: 80%;
+  margin-left: 50px;
+  margin-top: 0px;
+}
+
+a:nth-of-type(1) img:hover {
+  transform: scale(1.2);
+}
+
+a:nth-of-type(2) img {
+  box-shadow: 10px 10px 25px 5px black;
+  width: 80%;
+  transition: 0.2s ease-in-out;
+  margin-top: 70px;
+  margin-left: 40px;
+}
+
+a:nth-of-type(2) img:hover {
+  transform: scale(1.2);
+}
+
+a:nth-of-type(3) img {
+  width: 100%;
+  transform: rotate(-10deg);
+  filter: drop-shadow(10px 10px 6px black);
+  transition: 0.2s ease-in-out;
+  margin-top: 100px;
+}
+
+a:nth-of-type(3) img:hover {
+  transform: scale(1.2);
+}
+
+a:nth-of-type(4) img {
+  width: 90%;
+  transform: rotate(8deg);
+  box-shadow: 10px 10px 25px 5px black;
+  margin-right: 50px;
+  transition: 0.2s ease-in-out;
+  margin-top: 30px;
+}
+
+a:nth-of-type(4) img:hover {
+  transform: scale(1.2);
+}
+
+.container {
+  margin: 0;
+  background: url(vintage-paper2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* code voor zaklamp overgenomen van YouTube tutorial door Online web ustaad */
+
+:root {
+  cursor: none;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+}
+
+:root:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  pointer-events: none;
+  background: radial-gradient(circle 20vmax at var(--cursorX) var(--cursorY),
+  rgba(0,0,0,0) 0%,
+  rgba(0,0,0,0.5) 80%,
+  rgba(0,0,0,0.95) 100%
+  )
+}

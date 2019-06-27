@@ -1,0 +1,199 @@
+.background {
+  background: url(vintage-paper3.png);
+  background-size: cover;
+  background-repeat: no repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+article {
+  width: 900px;
+  margin: auto;
+  Animation: text-loadin 2s;
+  background-color: black;
+}
+
+p {
+  display: block;
+  width:80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-family: 'PT Serif', serif;
+}
+
+.titel {
+  text-align: center;
+  font-size: 3em;
+  color: #D16A5B;
+  padding-top: 20px;
+  font-family: impact;
+}
+
+p:nth-of-type(1) {
+font-weight: bold;
+font-size: 1.2em;
+}
+
+p:nth-of-type(7) {
+  font-style: italic;
+  font-size: 1.2em;
+  font-family: georgia;
+}
+
+.quote {
+  color: black;
+  width: 300px;
+  margin-top: 8%;
+  margin-left: 800px;
+  animation: mooieding2 3s forwards;
+  opacity: 0;
+}
+
+.niffonummer {
+width: 30%;
+top: 7%;
+left: 13%;
+animation: mooieding 3s forwards;
+position: absolute;
+z-index: 1;
+box-shadow: 10px 10px 25px 5px black;
+}
+
+.papier {
+  position: absolute;
+  width: 32%;
+  left: 730px;
+  top: 60px;
+  opacity: 0;
+  transform: scaleX(-1);
+  animation: mooieding3 3s forwards;
+}
+
+/* codepen text reveal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.quote {
+    --bg-color: black;
+}
+
+.quote span {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    line-height: 1.2;
+}
+
+.quote span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    background: black;
+    animation: a-ltr-after 3s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(-101%);
+}
+
+.quote span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    animation: a-ltr-before 4s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(0);
+}
+
+.quote span:nth-of-type(1)::before,
+.quote span:nth-of-type(1)::after{
+    animation-delay: 3s;
+}
+
+.quote span:nth-of-type(2)::before,
+.quote span:nth-of-type(2)::after{
+    animation-delay: 3.4s;
+}
+
+.quote span:nth-of-type(3)::before,
+.quote span:nth-of-type(3)::after{
+    animation-delay: 3.7s;
+}
+
+.quote span:nth-of-type(4)::before,
+.quote span:nth-of-type(4)::after{
+    animation-delay: 3.2s;
+}
+
+.quote span:nth-of-type(5)::before,
+.quote span:nth-of-type(5)::after{
+    animation-delay: 3.6s;
+}
+
+.quote span:nth-of-type(6)::before,
+.quote span:nth-of-type(6)::after{
+    animation-delay: 3.4s;
+}
+
+.quote span:nth-of-type(7)::before,
+.quote span:nth-of-type(7)::after{
+    animation-delay: 3.2s;
+}
+
+.quote span:nth-of-type(8)::before,
+.quote span:nth-of-type(8)::after{
+    animation-delay: 3.7s;
+}
+
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+}
+
+@keyframes mooieding {
+  0% {left: 35%;}
+  0% {top: -100%;}
+  40% {top: 7%;}
+  40% {left: 35%;}
+  100% {top: 7%;}
+  100% {left: 13%;}
+}
+
+@keyframes mooieding2 {
+  0% {margin-left: 580px;}
+  0% {opacity: 0;}
+  /* 0% {margin-top: -100%;} */
+  /* 40% {margin-top: 10%;} */
+  39% {opacity: 0;}
+  40% {margin-left: 580px;}
+  40% {opacity: 1;}
+  100% {opacity: 1;}
+  100% {margin-left: 820px;}
+}
+
+@keyframes mooieding3 {
+  0% {left: 520px;}
+  0% {opacity: 0;}
+  39% {opacity: 0;}
+  40% {left: 520px;}
+  40% {opacity: 0.8;}
+  100% {left: 730px;}
+  100% {opacity: 0.8;}
+}
